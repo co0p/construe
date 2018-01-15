@@ -34,7 +34,7 @@ func main() {
 	encoder := syndication.Encoder{}
 	decoder := syndication.Decoder{}
 	translationClient := translate.NewGoogleClient(googleKey)
-	storageClient := storage.MemoryStorage{}
+	storageClient := storage.NewMemoryStorage()
 
 	// usecases
 	importUsecase := usecases.Import{

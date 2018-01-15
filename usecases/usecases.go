@@ -1,5 +1,7 @@
 package usecases
 
+import "github.com/co0p/construe/storage"
+
 type Decoder interface{}
 
 type Encoder interface{}
@@ -9,8 +11,8 @@ type Translator interface {
 }
 
 type Storer interface {
-	Read(string) ([]byte, error)
-	Save(string, []byte) error
+	Read(string) (storage.Document, error)
+	Save(string, storage.Document) error
 }
 
 type Import struct {
